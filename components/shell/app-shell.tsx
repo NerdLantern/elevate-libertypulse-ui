@@ -6,6 +6,7 @@ import { AppSidebar } from './app-sidebar'
 import { TopBar } from './top-bar'
 import { ContactsPage } from '@/components/contacts/contacts-page'
 import { SalesRepsPage } from '@/components/sales-reps/sales-reps-page'
+import { PipelinePage } from '@/components/pipeline/pipeline-page'
 import { PlaceholderPage } from './placeholder-page'
 import { navItems, type NavId } from '@/lib/mock-data'
 
@@ -34,6 +35,8 @@ export function AppShell() {
                 <ContactsPage />
               ) : active === 'sales-reps' ? (
                 <SalesRepsPage />
+              ) : active === 'pipeline' ? (
+                <PipelinePage />
               ) : (
                 <PlaceholderPage label={label} />
               )}
